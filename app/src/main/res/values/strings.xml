@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Aplikacja Myśliwego</string>
     <string name="title_activity_maps">Map</string>
+    <string name="aRegister_button">Zarejestruj się</string>
+    <string name="aRegister_repass">Powtórz hasło</string>
+    <string name="aRegister_pass">Hasło</string>
+    <string name="aRegister_email">Email</string>
+    <string name="aRegister_login">Login</string>
+    <string name="aRegister_title">Utwórz konto</string>
 </resources>
