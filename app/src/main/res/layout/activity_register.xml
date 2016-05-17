@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/deerbg"
+    android:alpha="0.75"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/aRegister_title"
+        android:id="@+id/textView17"
+        android:autoText="false"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_right"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/aRegister_login"
+        android:ems="10"
+        android:id="@+id/editText_login"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_right"
+        android:backgroundTint="#ffffff"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText_email"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_right"
+        android:backgroundTint="#ffffff"
+        android:hint="@string/aRegister_email"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_password"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_left"
+        android:backgroundTint="#ffffff"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="@string/aRegister_pass" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_repassword"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
+        android:layout_marginRight="@dimen/abc_dropdownitem_text_padding_left"
+        android:backgroundTint="#ffffff"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:hint="@string/aRegister_repass"
+        android:layout_marginBottom="30dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/aRegister_button"
+        android:id="@+id/button_login"
+        android:clickable="true"
+        android:enabled="true"
+        android:background="#109d57"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_margin="60dp" />
+</LinearLayout>
