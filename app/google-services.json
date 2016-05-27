@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "553433535763",
+    "project_id": "aplikacjamysliwego"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553433535763:android:27d689d63f1b7a06",
+        "android_client_info": {
+          "package_name": "com.google.samples.quickstart.signin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553433535763-75h2vnnpddr2psdndkbpkekfonulqodo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.samples.quickstart.signin",
+            "certificate_hash": "11F8419D83477E2C9AB3F84D2430D1FB719418E2"
+          }
+        },
+        {
+          "client_id": "553433535763-8f3kl4ccd8fberdm8a5vg72d18l31he3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQAFaEwzTfOj1MfRYyxopp4-9QYH0ZfTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
