@@ -63,6 +63,19 @@
         android:id="@+id/mapButton"
         android:layout_below="@+id/gpsButton"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:textColor="#149d58"
+        android:layout_marginBottom="10dp"
+        android:background="#ffffff"
+        android:layout_width="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Dodaj pinezke"
+        android:id="@+id/pinButton"
+        android:layout_below="@+id/mapButton"
+        android:layout_alignParentStart="true" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"

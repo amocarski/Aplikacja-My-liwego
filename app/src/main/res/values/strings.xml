@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Aplikacja Myśliwego</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_draw_pin">DrawPinActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

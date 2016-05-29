@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,19 +23,19 @@ public class Database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_DRAWING_PINS_TABLE = "CREATE TABLE drawing_pins ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT, "+
+                "name TEXT, " +
                 "latitude REAL, " +
                 "longitude REAL, " +
                 "type TEXT" + ")";
 
         String CREATE_HUNTING_AREA_TABLE = "CREATE TABLE huntingarea ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT, "+
+                "name TEXT, " +
                 "description TEXT, " +
                 "topleftcorner REAL, " +
                 "toprightcorner REAL, " +
                 "bottomleftcorner REAL, " +
-                "bottomrightcorner REAL "+ ")";
+                "bottomrightcorner REAL " + ")";
 
         db.execSQL(CREATE_DRAWING_PINS_TABLE);
         db.execSQL(CREATE_HUNTING_AREA_TABLE);
@@ -61,7 +62,7 @@ public class Database extends SQLiteOpenHelper {
                         null,
                         null,
                         null);
-        if(cursor==null || cursor.getCount()<=0){
+        if (cursor == null || cursor.getCount() <= 0) {
             ContentValues values = new ContentValues();
             values.put("name", newDrawingPin.getName());
             values.put("latitude", newDrawingPin.getLatitude());
@@ -72,13 +73,25 @@ public class Database extends SQLiteOpenHelper {
 
             db.close();
             return true; //added item
-        }else{
+        } else {
             return false; //item exist
         }
 
     }
 
-    public DrawingPin getDrawingPin(int id){
+    public int getMaxIdDrawingPin() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT MAX(id) FROM drawing_pins", null);
+        int id;
+        if (cursor != null) {
+            cursor.moveToFirst();
+            id = cursor.getInt(0);
+        }else
+            id = -1;
+        return id;
+    }
+
+    public DrawingPin getDrawingPin(int id) {
 
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"id", "name", "latitude", "longitude", "type"};
@@ -107,7 +120,7 @@ public class Database extends SQLiteOpenHelper {
         return returnValue;
     }
 
-    public List<DrawingPin> getAllDrawingPins(){
+    public List<DrawingPin> getAllDrawingPins() {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -132,13 +145,14 @@ public class Database extends SQLiteOpenHelper {
 
         return drawingPins;
     }
-    public boolean deleteDrawingPin(int id){
+
+    public boolean deleteDrawingPin(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.delete("drawing_pins", "id = " + id, null) > 0;
     }
 
     /**********************************************************************************
-    HuntingArea
+     * HuntingArea
      ***********************************************************************************/
     public boolean addHuntingArea(HuntingArea newHuntingArea) {
 
@@ -153,7 +167,7 @@ public class Database extends SQLiteOpenHelper {
                         null,
                         null,
                         null);
-        if(cursor==null || cursor.getCount()<=0){
+        if (cursor == null || cursor.getCount() <= 0) {
             ContentValues values = new ContentValues();
             values.put("name", newHuntingArea.getName());
             values.put("description", newHuntingArea.getDescription());
@@ -166,13 +180,13 @@ public class Database extends SQLiteOpenHelper {
 
             db.close();
             return true; //added item
-        }else{
+        } else {
             return false; //item exist
         }
 
     }
 
-    public HuntingArea getHuntingArea(int id){
+    public HuntingArea getHuntingArea(int id) {
 
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"id", "name", "description", "topleftcorner", "toprightcorner", "bottomleftcorner", "bottomrightcorner"};
@@ -203,7 +217,7 @@ public class Database extends SQLiteOpenHelper {
         return returnValue;
     }
 
-    public List<HuntingArea> getAllHuntingAreas(){
+    public List<HuntingArea> getAllHuntingAreas() {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -231,7 +245,7 @@ public class Database extends SQLiteOpenHelper {
         return huntingAreas;
     }
 
-    public boolean deleteHuntingArea(int id){
+    public boolean deleteHuntingArea(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.delete("huntingarea", "id = " + id, null) > 0;
     }

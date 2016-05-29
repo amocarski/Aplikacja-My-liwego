@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button dbButton = (Button) findViewById(R.id.dbButton);
         Button gpsButton = (Button) findViewById(R.id.gpsButton);
         Button mapButton = (Button) findViewById(R.id.mapButton);
+        Button pinButton = (Button) findViewById(R.id.pinButton);
         final Button loginButton = (Button) findViewById(R.id.loginButton);
         final Button logoutButton = (Button) findViewById(R.id.logoutButton);
         final Button registerButton = (Button) findViewById(R.id.registerButton);
@@ -41,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
             logoutButton.setVisibility(View.GONE);
         }
 
+
+        if (pinButton != null){
+            pinButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, DrawPinActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
 
         if (dbButton != null){
             dbButton.setOnClickListener(new View.OnClickListener() {
