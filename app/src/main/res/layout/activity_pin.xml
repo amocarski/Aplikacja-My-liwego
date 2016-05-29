@@ -15,6 +15,15 @@
             android:src="@drawable/maptop"
             android:layout_weight="1"/>
 
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map2"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="253dp"
+            tools:context="com.example.am.aplikacjamyliwego.DrawPinActivity" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
